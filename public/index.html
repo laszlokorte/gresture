@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SVG Canvas</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="icon" href="./favicon.svg">
+</head>
+<body>
+	<div class="window-full">
+		<svg class="window-full-bg canvas" viewBox="-300 -300 600 600" width="600" height="600">
+			<g>
+				<rect x="-50" y="-50" width="100" height="100" rx="20" ry="20" fill="#af0"></rect>
+			</g>
+		</svg>
+		<div class="window-full-fg">
+			<div class="controls">
+				<h2>Test</h2>
+
+				<button type="button">Test</button>
+			</div>
+		</div>
+	</div>
+	<script type="importmap">
+	  {
+	    "imports": {
+	      "gresture": "./wasm/gresture.js"
+	    }
+	  }
+	</script>
+	<script type="module" src="./main.js"></script>
+</body>
+</html>

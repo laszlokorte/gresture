@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+input, textarea, select {
+	font: inherit;
+}
+
+:root {
+	box-sizing: border-box;
+}
+
+*, *::beforem *::after {
+	box-sizing: inherit;
+}
+
+.window-full {
+	outline: 1px solid green;
+	display: grid;
+	grid-template-rows: [bg-start] 100svh [bg-end fg-start] auto [fg-end];
+	grid-template-columns: [bg-start fg-start] auto [fg-end bg-end];
+	grid-auto-rows: auto;
+	align-items: stretch;
+	justify-content: stretch;
+}
+
+.window-full-fg {
+	grid-area: fg;
+	z-index: 100;
+}
+
+.window-full-bg {
+	grid-area: bg;
+	z-index: 50;
+}
+
+.canvas {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: block;
+	outline: 1px solid red;
+	position: sticky;
+	background: #fffff0;
+}
+
+.controls {
+	padding: 2em;
+	background: #fffa;
+	border-top: 2px solid #0001;
+}
